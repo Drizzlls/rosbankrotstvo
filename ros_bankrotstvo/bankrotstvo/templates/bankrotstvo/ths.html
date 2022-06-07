@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+ <header class="header">
+      <div class="container header__nav">
+        <div class="row">
+          <div class="col-12"><img class="header__logo" src="{% static '/assets/img/logo1.svg' %}"></div>
+        </div>
+      </div>
+      <div class="container-fluid header__descr header__descr-thanks">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="header__title">Благодарим за обращение!</h1>
+              <p>Поздравляем, в Вашем случае возможна процедура полного списания долгов по закону.</p>
+              <ol>
+                <li>
+                  В ближайшее время с вами по телефону свяжется наш специалист для уточнения деталей. Точную стоимость процедуры списания долга можно определить только после детального разбора вашей ситуации. Наш диалог — это первый шаг на пути к свободной жизни без долгов.
+                </li>
+                <li>Записаться на БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ С ЮРИСТОМ в вашем городе.</li>
+                <li>Получить перечень необходимых документов от юриста.</li>
+                <li>Заключить договор и остановить уже в 1-ый день рост долга.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+{% endblock %}
+{% block content %}
+
+    <section class="reviews">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="reviews__container">
+              <h2>Отзывы наших клиентов</h2>
+              <div class="reviews__grid">
+                <div class="reviews__item">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/dgq3fXMsFFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p class="reviews__name font-weight-bold">Дейнега С.В.</p>
+                  <p class="reviews__sum">1 417 783 рублей</p>
+                </div>
+                <div class="reviews__item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yxL29846P54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p class="reviews__name font-weight-bold">Збаразский Л.А.</p>
+                  <p class="reviews__sum">500 000 рублей</p>
+                </div>
+                <div class="reviews__item">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/vOpQgt0IsBY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p class="reviews__name font-weight-bold">Яргина Е.Н.</p>
+                  <p class="reviews__sum">1 296 036 рублей</p>
+                </div>
+              </div>
+            </div>
+            <h2 style="text-align:center">В ближайшее время с Вами свяжется наш юрист. Не пропустите входящий звонок!</h2>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}
+
+
+
+
+{% block footer %}
+ <footer class="footer footer-thanks">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-4 col-6 footer__phone"></div>
+          <div class="col-lg-6 col-md-8 col-6">
+            <div class="desktop-and-tablets-props footer__props"><span>ИНН 615429050498</span><span>ИП Ключников Егор Александрович</span></div>
+            <div class="mobile-props footer__props"><span>ОГРНИП 320619600098991</span><span>ИНН 615429050498</span></div>
+          </div>
+        </div>
+        <div class="row mobile-copyright">
+          <div class="col-12"><span>ИП Ключников Егор Александрович  |  Все права защищены © 2022</span></div>
+        </div>
+      </div>
+    </footer>
+{% endblock %}

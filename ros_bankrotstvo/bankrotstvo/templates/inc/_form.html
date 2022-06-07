@@ -1,0 +1,259 @@
+      {% load static %}
+    <section class="form">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <form  method="POST">
+              {% csrf_token %}
+              <input id="id_source" type="hidden" name="utm_source">
+              <input type="hidden" name="utm_medium">
+              <input type="hidden" name="utm_campaign">
+              <input type="hidden" name="utm_content">
+              <input type="hidden" name="utm_term">
+              <input type="hidden" name="yclid">
+              <input id="url" type="hidden" name="url">
+              <h2 class="section-title text--accent">Укажите верный вариант:</h2>
+              <div class="question form__item">
+                <h3 class="question-title">Какая сумма вашего долга?</h3>
+                <div class="question__input">
+                  <input type="radio" id="qw1-0" name="Сумма долга" value="0 рублей" checked="">
+                  <label class="radio-item" for="qw1-0"> <span>0 рублей</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="radio" id="qw1-1" name="Сумма долга" value="до 300 000 рублей" >
+                  <label class="radio-item" for="qw1-1"> <span>до 300 000 рублей</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="radio" id="qw1-2" name="Сумма долга" value="300 000 – 500 000 рублей">
+                  <label class="radio-item" for="qw1-2"> <span>300 000 – 500 000 рублей</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="radio" id="qw1-3" name="Сумма долга" value="500 000 – 1 000 000 рублей">
+                  <label class="radio-item" for="qw1-3"> <span>500 000 – 1 000 000 рублей</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="radio" id="qw1-4" name="Сумма долга" value="1 000 000 – 1 500 000 рублей">
+                  <label class="radio-item" for="qw1-4"> <span>1 000 000 – 1 500 000 рублей</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="radio" id="qw1-5" name="Сумма долга" value="более 1 500 000 рублей">
+                  <label class="radio-item" for="qw1-5"> <span>более 1 500 000 рублей</span></label>
+                </div>
+              </div>
+              <div class="question form__item">
+                <h3 class="question-title">Какое имущество у вас имеется?</h3>
+                <div class="question__input">
+                  <input type="checkbox" value="квартира (единственное жильё)" id="qw2-1" name="Имущество[]">
+                  <label class="checkbox-item" for="qw2-1"> <span>квартира (единственное жильё)</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="checkbox" value="земельный участок / загородный дом" id="qw2-2" name="Имущество[]">
+                  <label class="checkbox-item" for="qw2-2"> <span>земельный участок / загородный дом</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="checkbox" value="автомобиль" id="qw2-3" name="Имущество[]">
+                  <label class="checkbox-item" for="qw2-3"> <span>автомобиль</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="checkbox" value="иное имущество" id="qw2-4" name="Имущество[]">
+                  <label class="checkbox-item" for="qw2-4"> <span>иное имущество</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="checkbox" value="нет имущества" id="qw2-5" name="Имущество[]">
+                  <label class="checkbox-item" for="qw2-5"> <span>нет имущества</span></label>
+                </div>
+              </div>
+              <div class="question form__item">
+                <h3 class="question-title">Сколько времени вы не платите по кредитам?</h3>
+                <div class="question__input">
+                  <input type="radio" value="до 3-х месяцев" id="qw3-1" name="Время не оплаты кредитов" checked="" required="">
+                  <label class="radio-item" for="qw3-1"> <span>до 3-х месяцев</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="radio" value="от 3-х до 12-ти месяцев" id="qw3-2" name="Время не оплаты кредитов" required="">
+                  <label class="radio-item" for="qw3-2"> <span>от 3-х до 12-ти месяцев</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="radio" value="больше года" id="qw3-3" name="Время не оплаты кредитов" required="">
+                  <label class="radio-item" for="qw3-3"> <span>больше года</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="radio" value="плачу вовремя" id="qw3-4" name="Время не оплаты кредитов" required="">
+                  <label class="radio-item" for="qw3-4"> <span>плачу вовремя</span></label>
+                </div>
+              </div>
+              <div class="question form__item">
+                <h3 class="question-title">Имеется ли у вас действующая ипотека?</h3>
+                <div class="question__input">
+                  <input type="radio" value="Да" id="qw4-1" name="Ипотека" checked="" required="">
+                  <label class="radio-item" for="qw4-1"> <span>Да</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="radio" value="Нет" id="qw4-2" name="Ипотека" required="">
+                  <label class="radio-item" for="qw4-2"> <span>Нет</span></label>
+                </div>
+              </div>
+              <div class="question form__item">
+                <h3 class="question-title">Имеется ли обязательство по выплате алиментов?</h3>
+                <div class="question__input">
+                  <input type="radio" value="Да" id="qw5-1" name="Алименты" checked="" required="">
+                  <label class="radio-item" for="qw5-1"> <span>Да</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="radio" value="Нет" id="qw5-2" name="Алименты" required="">
+                  <label class="radio-item" for="qw5-2"> <span>Нет</span></label>
+                </div>
+              </div>
+              <div class="question form__item">
+                <h3 class="question-title">Потребуется ли рассрочка на услуги банкротства?</h3>
+                <div class="question__input">
+                  <input type="radio" value="Да" id="qw6-1" name="Рассрочка" checked="" required="">
+                  <label class="radio-item" for="qw6-1"> <span>Да</span></label>
+                </div>
+                <div class="question__input">
+                  <input type="radio" value="Нет" id="qw6-2" name="Рассрочка" required="">
+                  <label class="radio-item" for="qw6-2"> <span>Нет</span></label>
+                </div>
+              </div>
+              <div class="question form__item">
+                <h3 class="question-title">Куда отправить расчёт?</h3>
+                <div class="question__input">
+                  <input type="radio" value="по звонку" id="qw7-1" name="qw7" checked="" required="">
+                  <label class="radio-item" for="qw7-1"> <span>по звонку</span></label>
+                </div>
+              </div>
+              <div class="progressbar progressbar-mobile">
+                <div class="progressbar-mobile__title">
+                  <h2>Уже заполнено</h2>
+                  <h2 class="progressbar__status">76%</h2>
+                </div>
+                <div class="progressbar__common" style="text-align:center">
+                  <div class="progressbar__complete"></div>
+                </div><span >осталось совсем немного, чтобы списать долги</span>
+                <p style="margin:1em 0 0 0;text-align:center;">Получите полный анализ вашей ситуации и консультацию юриста <span style="color:red;font-weight:700">БЕСПЛАТНО</span></p>
+              </div>
+              <div class="personal"><img class="personal__bookmark" src="{% static 'assets/img/bookmark.svg' %}">
+                <div class="personal__container">
+                  <div class="personal__item">
+                    <h2 class="personal__title">Введите ваши данные</h2>
+                    <div class="inputs">
+                      <div class="input__item input__item--1 form__item">
+                        <input type="text" name="Имя" placeholder="Фамилия, имя и отчество" required="">
+                      </div>
+                      <div class="input__item input__item--2 form__item">
+                        <select class="form-control" type="text" name="Место жительства" required="">
+                          <option value="">Выбрать регион</option>
+                          <option value="1228">Алтайский край</option>
+                          <option value="1230">Амурская область</option>
+                          <option value="1232">Архангельская область</option>
+                          <option value="1234">Астраханская область</option>
+                          <option value="1236">Белгородская область</option>
+                          <option value="1238">Брянская область</option>
+                          <option value="1240">Владимирская область</option>
+                          <option value="1242">Волгоградская область</option>
+                          <option value="1244">Вологодская область</option>
+                          <option value="1246">Воронежская область</option>
+                          <option value="1248">Еврейская автономная областьь</option>
+                          <option value="1250">Забайкальский край</option>
+                          <option value="1252">Ивановская область</option>
+                          <option value="1254">Иркутская область</option>
+                          <option value="1256">Кабардино-Балкарская Республика</option>
+                          <option value="1258">Калининградская область</option>
+                          <option value="1260">Калужская область</option>
+                          <option value="1262">Камчатский край</option>
+                          <option value="1264">Карачаево-Черкесская Республика</option>
+                          <option value="1266">Кемеровская область</option>
+                          <option value="1268">Кировская область</option>
+                          <option value="1270">Костромская область</option>
+                          <option value="1272">Краснодарский край</option>
+                          <option value="1274">Красноярский край</option>
+                          <option value="1276">Курганская область</option>
+                          <option value="1278">Курская область</option>
+                          <option value="1280">Ленинградская область</option>
+                          <option value="1282">Липецкая область</option>
+                          <option value="1284">Магаданская область</option>
+                          <option value="1286">Москва</option>
+                          <option value="1288">Московская область</option>
+                          <option value="1290">Мурманская область</option>
+                          <option value="1292">Ненецкий автономный округ</option>
+                          <option value="1294">Нижегородская область</option>
+                          <option value="1296">Новгородская область</option>
+                          <option value="1298">Новосибирская область</option>
+                          <option value="1300">Омская область</option>
+                          <option value="1302">Оренбургская область</option>
+                          <option value="1304">Орловская область</option>
+                          <option value="1306">Пензенская область</option>
+                          <option value="1308">Пермский край</option>
+                          <option value="1310">Приморский край</option>
+                          <option value="1312">Псковская область</option>
+                          <option value="1314">Республика Адыгея</option>
+                          <option value="1316">Республика Алтай</option>
+                          <option value="1318">Республика Башкортостан</option>
+                          <option value="1320">Республика Бурятия</option>
+                          <option value="1322">Республика Дагестан</option>
+                          <option value="1324">Республика Ингушетия</option>
+                          <option value="1326">Республика Калмыкия</option>
+                          <option value="1328">Республика Карелия</option>
+                          <option value="1330">Республика Коми</option>
+                          <option value="1332">Республика Крым</option>
+                          <option value="1334">Республика Марий Эл</option>
+                          <option value="1336">Республика Мордовия</option>
+                          <option value="1338">Республика Саха (Якутия)</option>
+                          <option value="1340">Республика Северная Осетия - Алания</option>
+                          <option value="1342">Республика Татарстан</option>
+                          <option value="1344">Республика Тыва</option>
+                          <option value="1346">Республика Хакасия</option>
+                          <option value="1348">Ростовская область</option>
+                          <option value="1350">Рязанская область</option>
+                          <option value="1352">Самарская область</option>
+                          <option value="1354">Санкт-Петербург</option>
+                          <option value="1356">Саратовская область</option>
+                          <option value="1358">Сахалинская область</option>
+                          <option value="1360">Свердловская область</option>
+                          <option value="1362">Севастополь</option>
+                          <option value="1364">Смоленская область</option>
+                          <option value="1366">Ставропольский край</option>
+                          <option value="1368">Тамбовская область</option>
+                          <option value="1370">Тверская область</option>
+                          <option value="1372">Томская область</option>
+                          <option value="1374">Тульская область</option>
+                          <option value="1376">Тюменская область</option>
+                          <option value="1378">Удмуртская Республика</option>
+                          <option value="1380">Ульяновская область</option>
+                          <option value="1382">Хабаровский край</option>
+                          <option value="1384">Ханты-Мансийский автономный округ - Югра</option>
+                          <option value="1386">Челябинская область</option>
+                          <option value="1388">Чеченская Республика</option>
+                          <option value="1390">Чувашская Республика - Чувашия</option>
+                          <option value="1392">Чукотский автономный округ</option>
+                          <option value="1394">Ямало-Ненецкий автономный округ</option>
+                          <option value="1396">Ярославская область</option>
+                          <option value="1398">Иные территории, включая город и космодром Байконур</option>
+
+                        </select>
+                      </div>
+                      <div class="input__item input__item--3 form__item">
+                        <input id="phone" type="text" name="phone" placeholder="Номер телефона" required="">
+                      </div>
+                      <div class="input__item input__item--4">
+                        <input class="btn" type="submit">
+                      </div>
+                    </div>
+                    <p class="personal__policy">Нажимая кнопку, вы даёте согласие на обработку персональных данных согласно политике конфиденциальности</p>
+                    <div class="personal__law"><img src="{% static 'assets/img/gosuslugi.png' %}"><img src="{% static 'assets/img/elaw.png' %}"></div>
+                  </div>
+                  <div class="personal__item progressbar progressbar-desktop"><span>Уже заполнено</span>
+                    <h2 class="progressbar__status">76%</h2>
+                    <div class="progressbar__common">
+                      <div class="progressbar__complete"></div>
+                    </div><span>осталось совсем немного, чтобы списать долги</span>
+                    <div style="text-align: center;"><img src="{% static 'assets/img/gift.png' %}" alt="" style="width:315px">
+                    <p style="text-align:center"><i>Получите полный анализ вашей ситуации и консультацию юриста БЕСПЛАТНО</i></p></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
