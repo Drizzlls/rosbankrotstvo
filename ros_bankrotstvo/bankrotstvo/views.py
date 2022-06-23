@@ -1,11 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from bitrix24 import *
 
 
 def indexPage(request):
     if request.POST:
         treatment(req=request)
-        return render(request, 'bankrotstvo/ths.html')
+        return redirect("/ths")
     return render(request,'bankrotstvo/index.html')
 
 
